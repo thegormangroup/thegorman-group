@@ -12,10 +12,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  height: 100vh;
-}
-p {
-  margin: 4em;
+  height: 90vh;
+  margin-top: 5vh;
 }
 a {
   color: inherit;
