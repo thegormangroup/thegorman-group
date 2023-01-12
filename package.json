@@ -1,6 +1,6 @@
 {
-  "name": "thegormangroup",
-  "version": "0.1.0",
+  "name": "thegorman-group",
+  "version": "2.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",

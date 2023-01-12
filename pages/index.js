@@ -10,7 +10,7 @@ export default function Home() {
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <main>
-      <p style={{width:'11em'}}>Human-first digital solutions since 2005</p>
+      <p style={{width:'11em'}}>Human-first digital solutions</p>
       <Logo aria-label="Logo of The Gorman Group" />
       <p><a href="mailto:taylor@thegorman.group">Get in touch</a></p>
     </main>
