@@ -2,6 +2,11 @@ import Head from 'next/head'
 import Logo from '../public/logo.svg'
 
 export default function Home() {
+  function handleClickLogo(){
+    dataLayer.push({
+      event: 'click_logo'
+    })
+  }
   return (
   <>
     <Head>
@@ -11,7 +16,7 @@ export default function Home() {
     </Head>
     <main>
       <p style={{width:'11em'}}>Human-first digital solutions</p>
-      <Logo aria-label="Logo of The Gorman Group" />
+      <Logo aria-label="Logo of The Gorman Group" onClick={ handleClickLogo } />
       <p><a href="mailto:taylor@thegorman.group">Get in touch</a></p>
     </main>
   </>
