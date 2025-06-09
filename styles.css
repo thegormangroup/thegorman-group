@@ -1,0 +1,130 @@
+:root {
+  color-scheme: light dark;
+  --light: #eee;
+  --dark: #111;
+  --background-color: light-dark(
+    var(--light),
+    var(--dark)
+  );
+  --color: light-dark(
+    var(--dark),
+    var(--light)
+  );
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  line-height: 1.4;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  background-color: var(--background-color);
+  color: var(--color);
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: 200;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1em;
+}
+p, ul, ol {
+  margin: 1em 0;
+}
+table, img, hr {
+  margin: 2em 0;
+}
+hr {
+  border: 0;
+  border-bottom: solid 1px;
+  opacity: .25;
+}
+a {
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+  }
+  &.btn {
+    text-decoration: none;
+    border: solid 1px;
+    border-radius: .3em;
+    padding: .4em 1.2em;
+    display: inline-block;
+    margin: .2em;
+
+    &:hover {
+      box-shadow: 0px 3px currentColor;
+    }
+  }
+}
+svg {
+  display: block;
+  font-size: 1rem;
+  width: calc(7em + 20vmin);
+  height: calc(7em + 20vmin);
+
+  .text {
+    fill: currentColor;
+  }
+  .cls-6 {
+    isolation: isolate;
+  }
+  .g_front {
+    fill: light-dark(
+      hsl(180, 100%, 43%),
+      lime
+    );
+  }
+  .g_back {
+    fill: light-dark(
+      hsl(58, 100%, 46%),
+      blue
+    );
+  }
+  .slash {
+    fill: light-dark(
+      hsl(300, 100%, 60%),
+      red
+    );
+  }
+  .blend {
+    mix-blend-mode: multiply;
+
+    @media (prefers-color-scheme: dark) {
+      mix-blend-mode: screen;
+    }
+  }
+}
+.container {
+  padding: 0 6%;
+}
+.flex {
+  height: calc(100vh - 4em);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+
+  @media (orientation:portrait) {
+    flex-direction: column;
+  }
+}
+.screen-readers-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.text-center {
+  text-align: center;
+}
+.mt-0 {
+  margin-top: 0;
+}
